@@ -8,6 +8,7 @@
             "email": "galip.ozen@hotmail.com"
         }
     ],
+    "minimum-stability": "dev",
     "require": {
         "php": ">=7.1"
     },
