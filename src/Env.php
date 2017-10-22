@@ -27,6 +27,11 @@ class Env
     }
 
 
+    /**
+     * @param String $key
+     * @return String
+     * @throws \Exception
+     */
     public function getEnv(String $key): String
     {
         while (!$this->splFileObject->eof()) {
@@ -40,6 +45,8 @@ class Env
                 break;
             }
         }
+
+        $value = preg_replace('/\s+/', '', $value);
 
         return $value;
     }
